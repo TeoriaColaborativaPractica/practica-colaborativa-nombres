@@ -10,7 +10,7 @@ const datos_Fernandez = {
 const verDatos = document.querySelector('.verDatos');
 
 // clonar el template
-function cloneTemplate() {
+function cloneTemplate(dato) {
     const template = document.querySelector('#datosAlumnos');
     const clone = template.content.cloneNode(true);
 
@@ -19,13 +19,13 @@ function cloneTemplate() {
     const apellido = clone.querySelector('.apellido');
     const direccion = clone.querySelector('.direccion');
 
-    id.textContent = `ID: ${datos_Fernandez.id}`;
-    nombre.textContent = `Nombre: ${datos_Fernandez.nombre}`;
-    apellido.textContent = `Apellido: ${datos_Fernandez.apellido}`;
-    direccion.textContent = `Direccion: ${datos_Fernandez.direccion}`;
+    id.textContent = `ID: ${dato.id}`;
+    nombre.textContent = `Nombre: ${dato.nombre}`;
+    apellido.textContent = `Apellido: ${dato.apellido}`;
+    direccion.textContent = `Direccion: ${dato.direccion}`;
 
     verDatos.appendChild(clone);
 }
 
 // ejecutar la funcion
-cloneTemplate();
+cloneTemplate(datos_Fernandez);
