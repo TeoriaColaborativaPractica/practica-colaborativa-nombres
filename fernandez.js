@@ -1,3 +1,4 @@
+// Datos a cambiar
 const datos_Fernandez = {
     nombre: 'Jean Piere',
     apellido: 'Fernandez Torres',
@@ -5,8 +6,10 @@ const datos_Fernandez = {
     direccion: 'Puente Piedra - Zapallal',
 };
 
+// contenedor de los datos
 const verDatos = document.querySelector('.verDatos');
 
+// clonar el template
 function cloneTemplate() {
     const template = document.querySelector('#datosAlumnos');
     const clone = template.content.cloneNode(true);
@@ -24,4 +27,5 @@ function cloneTemplate() {
     verDatos.appendChild(clone);
 }
 
+// ejecutar la funcion
 cloneTemplate();
